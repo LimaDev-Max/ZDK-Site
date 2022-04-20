@@ -323,17 +323,17 @@ img {
 }
  
 .vantagem:nth-of-type(3n+1) .vantagem__titulo::before {
-    background: var(--clr-green-light);
+    background: var(--clr-red-light);
 	border-radius: 5px;
 }
  
 .vantagem:nth-of-type(3n+2) .vantagem__titulo::before {
-    background: var(--clr-pink-dark);
+    background: var(--clr-red-light);
 	border-radius: 5px;
 }
  
 .vantagem:nth-of-type(3n+3) .vantagem__titulo::before {
-    background: var(--clr-green-dark);
+    background: var(--clr-red-light);
 	border-radius: 5px;
 }
 
