@@ -13,27 +13,36 @@
 /* 5. Nossos cursos
 /* 6. Planos
 /* 7. Vantagens
-/* 8. Newsletter
-/* 9. Footer
+/* 8. Footer
 /**********************************/
 
 /**********************************/
 /* 0. Variáveis
 /**********************************/
 
-:root{
+:root {
 	--font-primary: "Nunito", helvetica, arial, sans-serif;
 
-	--clr-green-dark: #049a40;
-	--clr-green-light: #0BF96A;
+	--clr-red-light: #F12C4C;
+	--clr-green-light: #04BF8A ;
 	--clr-pink-dark:#E10Bf9;
 	--clr-pink-light: #F3A0FD;
 	--clr-white: #F5F5F5;
+	--clr-orange: #F39838;
+	--clr-black: #0F1923;
+
+	--Ouro:  #FFD700;
+	--Prata: #c0c0c0;
+	--Bronze:#D98E04;
 }
 
 /**********************************/
 /* 1. Estilos gerais
 /**********************************/
+
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	background-color: var(--clr-white);
@@ -49,22 +58,46 @@ a:visited {
 	color: black;
 }
 
-hr{
+hr {
 	border: none;
-	background-color: var(--clr-pink-dark);
+	background-color: var(--clr-red-light);
 	height: 2px;
 	width: 140px;
 	margin: 20px auto;
+}
+
+p {
+	line-height: 21.82px;
+	padding: 0  10px
+}
+
+.section__titulo {
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 15px;
+	padding-top: 15px;
+}
+
+.section__titulo-2 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 15px;
+	
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
 /**********************************/
 /* 2. Menu
 /**********************************/
 
-.menu-bg{
-	background-color: var(--clr-green-dark)
+.menu-bg {
+	background-color: var(--clr-red-light)
 }
 
-.menu{
+.menu {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -73,16 +106,16 @@ hr{
 	flex-wrap: wrap;
 }
 
-.menu__logo{
+.menu__logo {
 	margin: 10px;
 }
 
-.nav__list{
+.nav__list {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.nav__link{
+.nav__link {
 	padding: 20px 10px
 
 }
@@ -91,7 +124,7 @@ hr{
 /* 3. Header
 /**********************************/
 
-.intro{
+.intro {
 	font-weight: bold;
 	font-size: 3rem;
 	text-align: center;
@@ -103,23 +136,226 @@ hr{
 /* 4. Quem somos
 /**********************************/
 
+.somos {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.somos-c {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+}
+
+.somos-c__texto {
+	flex: 6 1 160px;
+}
+
+.somos-c__img {
+	flex: 1 1 350px;
+}
+
 /**********************************/
 /* 5. Nossos cursos
 /**********************************/
+
+.cursos { 
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.cursos-c {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.curso {
+	width: 280px;
+	margin: 0 20px;
+}
+
+.curso__titulo {
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 10px 0 10px 0;
+}
 
 /**********************************/
 /* 6. Planos
 /**********************************/
 
+.planos {
+	background-color: var(--clr-orange);
+}
+
+.planos-c {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end; 
+	padding-bottom: 30px;
+}
+
+.plano {
+	width: 300px;
+	margin: 10px;
+	border: 2px solid var(--clr-black);
+	border-radius: 7px;
+}
+
+.plano__titulo {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.plano__preco {
+	font-size: 3rem;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+
+.plano__preco sup {
+	position: relative;
+	font-size: 1.5rem;
+	top: -20px;
+}
+
+.plano__divisor {
+	background-color: var(--clr-red-light);
+	width: 30px;
+	margin: 5px auto;
+}
+
+.plano-lista {
+	max-width: 195px;
+	margin: 0 auto;
+}
+
+.plano-lista__item {
+	margin: 10px 0;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+}
+
+.plano-lista__item::before {
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: var(--clr-red-light);
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+.plano__btn-comprar {
+	display: block;
+	max-width: 180px;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 15px auto;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--clr-red-light);
+	border-radius: 5px;
+}
+
+.plano:last-child {
+	background-color: var(--Ouro);
+}
+
+.plano:last-child, .plano:last-child .plano__btn-comprar {
+	border: 2px solid var(--clr-black)
+}
+
+.plano:last-child .plano-lista__item::before, .plano:last-child .plano__divisor {
+	background-color: var(--clr-red-light)
+}
+
+@media (max-width: 800px) {
+	.plano:nth-child(3) {
+		order: -2;
+	}
+
+	.plano:nth-child(2) {
+		order: -1;
+	}
+	
+}
 /**********************************/
 /* 7. Vantagens
 /**********************************/
 
-/**********************************/
-/* 8. Newsletter
-/**********************************/
+.vantagens {
+    max-width: 960px;
+	margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	margin-bottom: 40px;
+}
+ 
+.vantagem {
+    max-width: 240px;
+    margin: 10px;
+}
+ 
+.vantagem__titulo {
+    font-size: 1.7em;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.vantagem__titulo::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 25px;
+    margin-right: 5px;
+}
+ 
+.vantagem:nth-of-type(3n+1) .vantagem__titulo::before {
+    background: var(--clr-green-light);
+	border-radius: 5px;
+}
+ 
+.vantagem:nth-of-type(3n+2) .vantagem__titulo::before {
+    background: var(--clr-pink-dark);
+	border-radius: 5px;
+}
+ 
+.vantagem:nth-of-type(3n+3) .vantagem__titulo::before {
+    background: var(--clr-green-dark);
+	border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .vantagem {
+        max-width: 220px;
+    }
+}
 
 /**********************************/
-/* 9. Footer
+/* 8. Footer
 /**********************************/
 
+.footer {
+	background: var(--clr-red-light);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 55px calc((100% - 960px) / 2);
+}
+
+.footer__copyright, .footer__logo {
+	padding-left: 10px;
+	padding-right: 10px;
+}
